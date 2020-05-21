@@ -68,6 +68,16 @@ body {
 .form__input-submit:focus {
   background-color: hsl(223, 100%, 71%);
 }
+.tooltip-empty {
+  grid-column: 1;
+  grid-row: 2;
+  display: none;
+  color: hsl(354, 100%, 66%);
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  margin-left: 25px;
+}
 .tooltip {
   grid-column: 1;
   grid-row: 2;
@@ -152,7 +162,8 @@ a:focus svg {
     text-align: center;
     margin-bottom: 0;
   }
-  .tooltip-two {
+  .tooltip-two,
+  .tooltip-empty {
     text-align: center;
   }
 }
