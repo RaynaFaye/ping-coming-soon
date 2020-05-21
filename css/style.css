@@ -69,8 +69,20 @@ body {
   background-color: hsl(223, 100%, 71%);
 }
 .tooltip {
+  grid-column: 1;
+  grid-row: 2;
   visibility: hidden;
   color: hsl(354, 100%, 66%);
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  margin-left: 25px;
+}
+.tooltip-two {
+  grid-column: 1;
+  grid-row: 2;
+  display: none;
+  color: hsl(118, 68%, 32%);
   font-size: 12px;
   font-style: italic;
   text-align: left;
@@ -138,6 +150,9 @@ a:focus svg {
   }
   .tooltip {
     text-align: center;
-    margin: 0;
+    margin-bottom: 0;
+  }
+  .tooltip-two {
+    text-align: center;
   }
 }
