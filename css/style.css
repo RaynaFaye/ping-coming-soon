@@ -1,10 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 
+body {
+  text-align: center;
+  font-family: 'Libre Franklin', sans-serif;
+  color: hsl(209, 33%, 12%);
+  font-size: 20px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+}
+.container > * {
+  grid-column: 2;
+}
+.header-logo {
+  margin: 100px 0 25px 0;
+}
+.title {
+  margin-bottom: 0;
+}
+.title-launch {
+  color: hsl(0, 0%, 59%);
+  font-weight: 300;
+}
+.illustration-dashboard {
+  width: 100%;
+  margin-bottom: 100px;
+}
+/* Form section */
+.form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 25px;
+  margin: 30px 0 50px 0;
+}
+.form__label {
+  position: absolute;
+  left: -100vw;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.form__input-email {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: 'Libre Franklin', sans-serif;
+  border-radius: 50px;
+  border: 1px solid hsl(0, 0%, 59%);
+  padding: 20px 20px 20px 30px;
+}
+.form__input-submit {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: hsl(223, 87%, 63%);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 5px 5px hsl(223, 100%, 85%);
+  padding: 20px 20px 20px 30px;
+  cursor: pointer;
+}
+.form__input-submit:hover,
+.form__input-submit:focus {
+  background-color: hsl(223, 100%, 71%);
+}
+.tooltip {
+  visibility: hidden;
+  color: hsl(354, 100%, 66%);
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  margin-left: 25px;
+}
+/* Footer Section */
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+}
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+svg {
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 59%);
+  padding: 5px;
+}
+svg:hover,
+a:focus svg {
+  fill: #ffffff;
+  background-color: hsl(223, 87%, 63%);
+  border: 1px solid hsl(223, 87%, 63%);
+}
+.footer__copyright {
+  color: hsl(0, 0%, 59%);
+  font-size: 16px;
+  margin: 40px 0;
+}
+
 /* Attribution section */
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 50px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+@media all and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    grid-template-columns: 20px 1fr 20px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .illustration-dashboard {
+    grid-column: 1 /-1;
+    margin-top: 50px;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form > * {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .tooltip {
+    text-align: center;
+    margin: 0;
+  }
 }
