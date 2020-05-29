@@ -102,6 +102,9 @@ body {
 .footer__social-links {
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .footer__social-link {
   display: flex;
