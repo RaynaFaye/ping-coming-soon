@@ -21,9 +21,9 @@ form.addEventListener('submit', function (event) {
     tooltip.style.marginBottom = '0px';
     tooltipTwo.style.display = 'block';
     emailInput.style.border = '1px solid hsl(0, 0%, 59%)';
+    setTimeout(function () {
+      tooltipTwo.style.display = 'none';
+    }, 3000);
+    form.reset();
   }
-  setTimeout(function () {
-    tooltipTwo.style.display = 'none';
-  }, 3000);
-  form.reset();
 });
